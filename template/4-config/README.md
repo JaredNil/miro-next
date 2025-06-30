@@ -1,6 +1,6 @@
 **1 Добавляем типы переменных окружения**
 
-Переименумем `src/shared/vite-env.d.ts` -> `src/shared/env.d.ts`
+Переименумем `src/shared/env.d.ts.ts` -> `src/shared/env.d.ts`
 
 И отредактируем содержимое
 `shared/env.d.ts`
