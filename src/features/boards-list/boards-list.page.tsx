@@ -2,6 +2,7 @@ import {href, Link} from "react-router-dom";
 import {ROUTES} from "@/shared/model/routes.tsx";
 import {rqClient} from "@/shared/api/instance.ts";
 import {useQueryClient} from "@tanstack/react-query";
+import {Button} from "@/shared/ui/kit/button.tsx";
 
 function BoardsListPage() {
 
@@ -44,6 +45,9 @@ function BoardsListPage() {
             }})}>добавить
         </button>
 
+        <Button>
+            Новая кнопка
+        </Button>
     </div>;
 }
 

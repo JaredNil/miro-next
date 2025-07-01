@@ -51,7 +51,7 @@ npm i tw-animate-css
 
 Переносим утилиты для работы с классами
 
-`src/lib/utils.ts` -> `src/shared/lib/css.ts`
+`src/lib/css.ts` -> `src/shared/lib/css.ts`
 
 **3 Добавляем пример компонента**
 
