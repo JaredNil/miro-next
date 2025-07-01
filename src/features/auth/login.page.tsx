@@ -5,29 +5,19 @@ import { LoginForm } from "./ui/login-form";
 
 
 
-function LoginPage() {
-
-    // const loginMutation = rqClient.useMutation("post", "/auth/login")
-
-    /* loginMutation.mutate({
-        body: {
-            email: "admin@gmail.com",
-            password: "111"
-        }
-     }) */
-
+export function LoginPage() {
     return (
-    <AuthLayout
-      title="Вход в систему"
-      description="Введите ваш email и пароль для входа в систему"
-      form={<LoginForm />}
-      footerText={
-        <>
-          Нет аккаунта? <Link to={ROUTES.REGISTER}>Зарегистрироваться</Link>
-        </>
-      }
-    />
-  );
+        <AuthLayout
+            title="Вход в систему"
+            description="Введите ваш email и пароль для входа в систему"
+            form={<LoginForm />}
+            footerText={
+                <>
+                    Нет аккаунта? <Link to={ROUTES.REGISTER}>Зарегистрироваться</Link>
+                </>
+            }
+        />
+    );
 }
 
 export const Component = LoginPage;
