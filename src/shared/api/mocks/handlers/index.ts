@@ -1,6 +1,7 @@
 import { HttpResponse } from "msw";
 import { http } from "../http";
 import type {ApiSchemas} from "../../schema";
+import {authHandlers} from "@/shared/api/mocks/handlers/auth.ts";
 
 const boards: ApiSchemas["Board"][] = [
   {
@@ -17,13 +18,5 @@ export const handlers = [
   http.get("/boards", () => {
     return HttpResponse.json(boards);
   }),
-    // http.post('/boards', async (ctx)=>{
-    //   const data = await ctx.request.json();
-    //   const board = {
-    //     id: crypto.randomUUID(),
-    //     name: data.name
-    //   }
-    //
-    //   return HttpResponse.json(board);
-    // }),
+    ...authHandlers,
 ];
