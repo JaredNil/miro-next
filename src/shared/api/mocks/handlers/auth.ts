@@ -1,11 +1,11 @@
-import { ApiSchemas } from "../../schema";
+import type { ApiSchemas } from "@/shared/api/schema/index.ts";
 import { http } from "../http";
 import { delay, HttpResponse } from "msw";
 import {
   createRefreshTokenCookie,
   generateTokens,
   verifyToken,
-} from "../session";
+} from "../../session";
 
 const mockUsers: ApiSchemas["User"][] = [
   {
