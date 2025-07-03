@@ -1,22 +1,7 @@
-import { HttpResponse } from "msw";
-import { http } from "../http";
-import type {ApiSchemas} from "../../schema";
 import {authHandlers} from "@/shared/api/mocks/handlers/auth.ts";
-
-const boards: ApiSchemas["Board"][] = [
-  {
-    id: "board-1",
-    name: "Marketing Campaign",
-  },
-  {
-    id: "board-2",
-    name: "Product Roadmap",
-  },
-];
+import {boardsHandlers} from "@/shared/api/mocks/handlers/boards.ts";
 
 export const handlers = [
-  http.get("/boards", () => {
-    return HttpResponse.json(boards);
-  }),
+    ...boardsHandlers,
     ...authHandlers,
 ];
